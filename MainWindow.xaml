@@ -9,31 +9,29 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="Sistema Pomodoro" Height="450" Width="800">
-    <Grid >
-        <Rectangle HorizontalAlignment="Left" Height="313" Margin="595,46,0,0" Stroke="Black" VerticalAlignment="Top" Width="159"/>
-        <Grid x:Name="gridBarra" Margin="0,0,0,390" Background="Aqua"/>
-        <Rectangle  HorizontalAlignment="Left" Height="275" Margin="7,46,0,0" Stroke="Black" VerticalAlignment="Top" Width="385"/>
-        <Rectangle HorizontalAlignment="Left" Height="275" Margin="396,46,0,0" Stroke="Black" VerticalAlignment="Top" Width="195"/>
-        <TextBox x:Name="txbStatus" HorizontalAlignment="Left" Margin="595,74,0,0" IsReadOnly="True" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Height="61" TextAlignment="Center" BorderBrush="#FF6C748F" FontWeight="Bold"/>
-        <TextBox x:Name="txbPercentualConclusao" HorizontalAlignment="Left" Margin="595,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Height="56" FontWeight="Bold" TextAlignment="Center" IsReadOnly="True"/>
-        <Label x:Name="lblStatus" Content="Status" HorizontalAlignment="Left" Margin="598,48,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="154" FontWeight="Bold" Background="LightGray"/>
-        <Label x:Name="lblPercentualConclusao" Content="Percentual de Conclusão" HorizontalAlignment="Left" Margin="598,141,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="LightGray" Width="154"/>
-        <Label x:Name="lblTipoDeCiclo" Content="Selecione o tipo de Ciclo" HorizontalAlignment="Left" Margin="230,60,0,0" VerticalAlignment="Top" Width="152" FontWeight="Bold" FontStyle="Italic"/>
-        <ComboBox x:Name="cbxTipoDeCiclo" HorizontalAlignment="Left" Margin="230,80,0,0"  VerticalAlignment="Top" Width="145" Height="22" >
+    <Grid Margin="0,-13,-203,-138" >
+        <Rectangle HorizontalAlignment="Left" Height="275" Margin="525,46,0,0" Stroke="Black" VerticalAlignment="Top" Width="229"/>
+
+        <Rectangle  HorizontalAlignment="Left" Height="275" Margin="7,46,0,0" Stroke="Black" VerticalAlignment="Top" Width="514"/>
+
+        <TextBox x:Name="txbStatus" HorizontalAlignment="Left" Margin="528,74,0,0" IsReadOnly="True" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" Height="107" TextAlignment="Center" BorderBrush="#FF6C748F" FontWeight="Bold"/>
+        <Label x:Name="lblStatus" Content="Status" HorizontalAlignment="Left" Margin="527,48,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="225" FontWeight="Bold" Background="LightGray"/>
+        <Label x:Name="lblTipoDeCiclo" Content="Selecione o tipo de Ciclo" HorizontalAlignment="Left" Margin="325,60,0,0" VerticalAlignment="Top" Width="175" FontWeight="Bold" FontStyle="Italic"/>
+        <ComboBox x:Name="cbxTipoDeCiclo" HorizontalAlignment="Left" Margin="325,80,0,0"  VerticalAlignment="Top" Width="175" Height="22" >
             <ComboBoxItem Content="30 Minutos" IsSelected="True"/>
             <ComboBoxItem Content="2 Horas"/>
             <ComboBoxItem Content="1 Minuto (TESTE)"/>
         </ComboBox>
-        <Label x:Name="lblAdicionarTarefa" Content="Tarefa" HorizontalAlignment="Left" Margin="230,110,0,0" VerticalAlignment="Top" Width="152" FontWeight="Bold" FontStyle="Italic"/>
-        <TextBox x:Name="txbTarefa" HorizontalAlignment="Left"  Margin="230,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="22" FontWeight="Bold"/>
-        <Label x:Name="lblHorarioDeInicio" Content="Início" HorizontalAlignment="Left" Margin="230,160,0,0" VerticalAlignment="Top" Width="152" Height="24" FontWeight="Bold" FontStyle="Italic"/>
-        <TextBox x:Name="txbHorarioDeInicio" HorizontalAlignment="Left" Margin="230,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="22" FontWeight="Bold" IsReadOnly="True"/>
-        <Label x:Name="lblHoraDoTermino" Content="Término" HorizontalAlignment="Left" Margin="230,210,0,0" VerticalAlignment="Top" Width="152" FontWeight="Bold" FontStyle="Italic"/>
-        <TextBox x:Name="txbHorarioDoTermino" HorizontalAlignment="Left" Margin="230,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="22" FontWeight="Bold" IsReadOnly="True"/>
-        <Button x:Name="btnIniciaCiclo" Content="Iniciar Ciclo" HorizontalAlignment="Left" Margin="24,286,0,0" VerticalAlignment="Top" Width="168" Background="LightGreen" Click="btnIniciaCiclo_Click"/>
-        <Button x:Name="btnDesligar" Content="Desligar Relógio" HorizontalAlignment="Left" Margin="208,286,0,0" VerticalAlignment="Top" Width="168" Background="Red" Click="btnDesligar_Click"/>
-        <Image x:Name="imgRelogioPomodoro" HorizontalAlignment="Left" Height="178" Margin="22,76,0,0" VerticalAlignment="Top" Width="163" Source="/RelogioPomodoro.png" RenderTransformOrigin="0.34,0.457"/>
-        <DataGrid x:Name="dgListaDeTarefas" Margin="399,77,0,116" IsReadOnly="True" HorizontalAlignment="Left" Width="190" AutoGenerateColumns="False">
+        <Label x:Name="lblAdicionarTarefa" Content="Tarefa" HorizontalAlignment="Left" Margin="325,110,0,0" VerticalAlignment="Top" Width="175" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox x:Name="txbTarefa" HorizontalAlignment="Left"  Margin="325,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="22" FontWeight="Bold"/>
+        <Label x:Name="lblHorarioDeInicio" Content="Início" HorizontalAlignment="Left" Margin="325,160,0,0" VerticalAlignment="Top" Width="175" Height="24" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox x:Name="txbHorarioDeInicio" HorizontalAlignment="Left" Margin="320,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="22" FontWeight="Bold" IsReadOnly="True"/>
+        <Label x:Name="lblHoraDoTermino" Content="Término" HorizontalAlignment="Left" Margin="325,210,0,0" VerticalAlignment="Top" Width="175" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox x:Name="txbHorarioDoTermino" HorizontalAlignment="Left" Margin="325,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="22" FontWeight="Bold" IsReadOnly="True"/>
+        <Button x:Name="btnIniciaCiclo" Content="Iniciar Ciclo" HorizontalAlignment="Left" Margin="24,286,0,0" VerticalAlignment="Top" Width="140" Background="LightGreen" Click="btnIniciaCiclo_Click"/>
+        <Button x:Name="btnDesligar" Content="Desligar Relógio" HorizontalAlignment="Left" Margin="175,286,0,0" VerticalAlignment="Top" Width="140" Background="Red" Click="btnDesligar_Click"/>
+        <Image x:Name="imgRelogioPomodoro" HorizontalAlignment="Left" Height="201" Margin="61,53,0,0" VerticalAlignment="Top" Width="222" Source="/RelogioPomodoro.png" RenderTransformOrigin="0.34,0.457"/>
+        <DataGrid x:Name="dgListaDeTarefas" Margin="7,348,0,143" IsReadOnly="True" HorizontalAlignment="Left" Width="745" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Ciclo" Binding="{Binding TipoCiclo}"/>
                 <DataGridTextColumn Header="Tarefa" Binding="{Binding Nome}"/>
@@ -42,8 +40,8 @@
                 <DataGridTextColumn Header="Duracao" Binding="{Binding Duracao}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label x:Name="lblListaDeTarefas" Content="Lista de Tarefas" HorizontalAlignment="Left" Margin="399,48,0,0" VerticalAlignment="Top" Width="189" FontWeight="Bold" HorizontalContentAlignment="Center" Background="LightGray"/>
-        <Label x:Name="lblTimer" Content="" HorizontalAlignment="Left" Margin="598,292,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontWeight="Bold" Background="LightGray" Width="154"/>
+        <Label x:Name="lblListaDeTarefas" Content="Lista de Tarefas" HorizontalAlignment="Left" Margin="7,324,0,0" VerticalAlignment="Top" Width="746" FontWeight="Bold" HorizontalContentAlignment="Center" Background="LightGray" Height="23"/>
+        <Label x:Name="lblTimer" Content="" HorizontalAlignment="Left" Margin="529,226,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontWeight="Bold" Background="LightGray" Width="222" Height="73" VerticalContentAlignment="Center" FontSize="22"/>
 
 
 
